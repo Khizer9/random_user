@@ -21,6 +21,10 @@ body {
 .container{
   display: flex;
   justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  padding: 0px 10px;
 }
 
 .userImage{
@@ -28,10 +32,11 @@ body {
   height: 100px;
   border-radius: 50%;
   margin-right: 10px;
+  margin: auto;
 }
 .userContent{
   list-style: none;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .userData {
@@ -39,15 +44,50 @@ body {
 }
 
 .userContent .userList{
-  border: 1px solid gray;
-    border-radius: 16px;
     padding: 10px;
-    gap: 16px;
-    margin-bottom: 10px;
 }
 
 .userContent .userName{
   padding: 5px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.reloadBtn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: flex-end;
+  margin-right: 230px;
+}
+
+.reloadBtn svg {
+  width: 40px;
+  height: 40px;
+  justify-content: flex-end;
+}
+
+.spinning {
+  animation: spinning 0.3s infinite linear; /* Keep spinning indefinitely */
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.messageBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageBtn svg {
+  width: 50px;
+  height: 50px;
 }
